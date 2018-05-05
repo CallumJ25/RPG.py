@@ -1,3 +1,9 @@
+import time
+import random
+intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan."]
+for s in intro:
+    print s
+    time.sleep(2.5)
 class Game:
  def __init__(self, HP, ATK):
   self.HP = HP
