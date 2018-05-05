@@ -3,4 +3,4 @@ class Player:
   self.HP = HP
   self.ATK = ATK
 player = Player("21", "29")
-
+print "hello"
