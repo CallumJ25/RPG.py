@@ -1,6 +1,6 @@
 import time
 import random
-intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan."]
+intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan.","It shall be difficult,","but I sense something special about you."]
 for s in intro:
     print s
     time.sleep(2.5)
@@ -22,4 +22,4 @@ def level_up():
         level=level+1
         exp = exp - level_req
         level_req = level * 100 + level * 10
-level_up()
+input = raw_input("Where shall you go?")
