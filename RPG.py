@@ -5,9 +5,8 @@ list = ["face"]
 intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan.","It shall be difficult,","but I sense something special about you.","Go ahead and start your journey,","but remember to ask for help if you have no idea what to do."]
 Bobo_intro=["???: *grumble* Fine, come on in.", "???: Just don't ask me for money for your little club or somthing.","???: And we don't have candy either.", "???: Oh! Sorry, I didn't know that an adventurer would come here!","Bobo: My name is Bobo, the humble owner of this shop.","Bobo: We have many things for people like you.","Bobo: swords, shields, and more!","Bobo: Just make sure you have enough money, and anything is yours."]
 Bobo=["Bobo: Hello there!","Bobo: No monsters here, eh?","Bobo: Welcome to Bobo's Armory!"]
-sword_index=["dagger", "broadsword", "short-sword", "blankL2", "blankL3"]
-shield_index=["blankL1", "blankL1", "blankL1", "spiked-shield", "golem-shield"]
-print  sword_index
+sword_index=["dagger", "broadsword", "short-sword", "scimitar", "enchanted-sword"]
+shield_index=["round-shield", "targe-shield", "kite-shield", "spiked-shield", "golem-shield"]
 for s in intro:
     print s
     time.sleep(2)
