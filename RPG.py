@@ -6,8 +6,8 @@ list = ["face"]
 intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan.","It shall be difficult,","but I sense something special about you.","Go ahead and start your journey,","but remember to ask for help if you have no idea what to do."]
 Bobo_intro=["???: *grumble* Fine, come on in.", "???: Just don't ask me for money for your little club or somthing.","???: And we don't have candy either.", "???: Oh! Sorry, I didn't know that an adventurer would come here!","Bobo: My name is Bobo, the humble owner of this shop.","Bobo: We have many things for people like you.","Bobo: swords, shields, and more!","Bobo: Just make sure you have enough money, and anything is yours."]
 Bobo=["Bobo: Hello there!","Bobo: No monsters here, eh?","Bobo: Welcome to Bobo's Armory!"]
-sword_index=["dagger", "broadsword", "short-sword", "blankL2", "blankL3"]
-shield_index=["blankL1", "blankL1", "blankL1", "spiked-shield", "golem-shield"]
+sword_index=["dagger", "broadsword", "short-sword", "scimitar", "enchanted-sword"]
+shield_index=["large-shield", "circle-shield", "kite-shield", "spiked-shield", "golem-shield"]
 for s in intro:
     print s
     time.sleep(2)
@@ -32,7 +32,6 @@ def level_up():
 def NPC_text():
     global list
     print list[int((random.uniform(0,3)))]
-    time.sleep(1)
 while True:
     place = raw_input("Where shall you go? ")
     if place == "shop":
@@ -48,11 +47,14 @@ while True:
             if gear_type == "swords":
                 print sword_index
                 sword = raw_input("What sword do you want?")
-                number = 0
                 for x in sword_index:
                     if sword == x:
                         print sword
-            elif gear_type == shields:
+            elif gear_type == "shields":
                 print shield_index
+                shield = raw_input("What shield do you want? ")
+                for x in shield_index:
+                    if shield == x:
+                        print sword
         else:
             print "You can type in shop."
