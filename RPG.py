@@ -1,13 +1,13 @@
 import time
 import random
 first=1
+money = 5
 list = ["face"]
 intro=["Hello!","Welcome to Callum's RPG!","A place where monsters reign,","but where heroes dwell and grow.","You my friend,","shall have to defeat the evil that lurks across the land.","The mighty and powerful,","Rowan.","It shall be difficult,","but I sense something special about you.","Go ahead and start your journey,","but remember to ask for help if you have no idea what to do."]
 Bobo_intro=["???: *grumble* Fine, come on in.", "???: Just don't ask me for money for your little club or somthing.","???: And we don't have candy either.", "???: Oh! Sorry, I didn't know that an adventurer would come here!","Bobo: My name is Bobo, the humble owner of this shop.","Bobo: We have many things for people like you.","Bobo: swords, shields, and more!","Bobo: Just make sure you have enough money, and anything is yours."]
 Bobo=["Bobo: Hello there!","Bobo: No monsters here, eh?","Bobo: Welcome to Bobo's Armory!"]
 sword_index=["dagger", "broadsword", "short-sword", "blankL2", "blankL3"]
 shield_index=["blankL1", "blankL1", "blankL1", "spiked-shield", "golem-shield"]
-print  sword_index
 for s in intro:
     print s
     time.sleep(2)
@@ -36,7 +36,7 @@ def NPC_text():
 while True:
     place = raw_input("Where shall you go? ")
     if place == "shop":
-        if money < 0:
+        if money > 0:
             if first == 1:
                 for i in Bobo_intro:
                     print i
@@ -44,9 +44,14 @@ while True:
                 first=0
             list=Bobo
             NPC_text()
-            gear_type = raw_input ("What type of stuff do you want?")
-            if gear_type == swords:
+            gear_type = raw_input ("What type of stuff do you want? ")
+            if gear_type == "swords":
                 print sword_index
+                sword = raw_input("What sword do you want?")
+                number = 0
+                for x in sword_index:
+                    if sword == x:
+                        print sword
             elif gear_type == shields:
                 print shield_index
         else:
