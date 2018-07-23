@@ -12,13 +12,18 @@ for s in intro:
     print s
     time.sleep(2)
 class Game:
- def __init__(self, HP, ATK):
-  self.HP = HP
-  self.ATK = ATK
+    def __init__(self, HP, ATTK):
+        self.HP = HP
+        self.ATTK = ATTK
 player = Game("20", "5")
 exp=110
 level=1
 level_req=110
+class Sword:
+    def __init__(self,ATK,SPD):
+        self.ATK = ATK
+        self.SPD = SPD
+dagger = Sword("3","5")
 def level_up():
     global exp
     global level
@@ -32,6 +37,10 @@ def level_up():
 def NPC_text():
     global list
     print list[int((random.uniform(0,3)))]
+def Sword_Select(swordex):
+    print "{} ATK".format(swordex.ATK)
+    print "{} SPD".format(swordex.SPD)
+    print "Do u want to dab or play Basketball?"
 while True:
     place = raw_input("Where shall you go? ")
     if place == "shop":
@@ -46,15 +55,14 @@ while True:
             gear_type = raw_input ("What type of stuff do you want? ")
             if gear_type == "swords":
                 print sword_index
-                sword = raw_input("What sword do you want?")
-                for x in sword_index:
-                    if sword == x:
-                        print sword
+                sword = raw_input("What sword do you want? ")
+                if sword == "dagger":
+                    Sword_Select(dagger)
             elif gear_type == "shields":
                 print shield_index
                 shield = raw_input("What shield do you want? ")
                 for x in shield_index:
                     if shield == x:
-                        print sword
+                        print shield
         else:
             print "You can type in shop."
