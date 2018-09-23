@@ -1,2 +1,1 @@
-# RPG.py
-a Buddding in dev RPG
+# maze-game
